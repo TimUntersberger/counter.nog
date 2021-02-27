@@ -1,7 +1,9 @@
+import nog.bar.Text
+
 var count = atomic(0)
 
 export var component = #{
     name: "Counter",
-    render: () => [String.from(count.value)],
+    render: () => [Text(count.value)],
     on_click: () => count.value++
 }
